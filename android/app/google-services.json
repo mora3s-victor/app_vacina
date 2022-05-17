@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "698565374837",
+    "project_id": "vacina-animal",
+    "storage_bucket": "vacina-animal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698565374837:android:52efc21d0742bf2542993c",
+        "android_client_info": {
+          "package_name": "br.com.victor.app_vacina_animal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698565374837-p9ad2nnij3eucanfn7533p7tc9obutlo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk7tjgIZmgDSaxDNMtIFUvxi69syLDxo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698565374837-p9ad2nnij3eucanfn7533p7tc9obutlo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
