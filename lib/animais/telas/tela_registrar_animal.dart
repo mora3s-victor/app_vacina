@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:app_vacina_animal/main.dart';
-import 'package:app_vacina_animal/models/services/animal_servico.dart';
-import 'package:app_vacina_animal/models/vo/animal_vo.dart';
+import 'package:app_vacina_animal/animais/servico/animal_servico.dart';
+import 'package:app_vacina_animal/animais/vo/animal_vo.dart';
 import 'package:flutter/material.dart';
 
 class TelaCadastroAnimal extends StatelessWidget {
@@ -19,6 +19,7 @@ class TelaCadastroAnimal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String? id;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Registrar Animal'),
@@ -181,13 +182,15 @@ class TelaCadastroAnimal extends StatelessWidget {
                   if (_formKey.currentState!.validate()) {
                     AnimalServico animalServices = AnimalServico();
                     AnimalVO animal = AnimalVO(
+                        id,
                         codigoAnimalController.text,
                         descricaoController.text,
                         racaController.text,
                         sexoController.text,
                         pesoController.text);
                     animalServices.addAnimal(animal);
-                    Navigator.of(context).pushReplacementNamed(MyApp.home);
+                    Navigator.of(context)
+                        .pushReplacementNamed(MyApp.dashboardScreen);
                   }
                 },
                 child: const Text('Salvar'),

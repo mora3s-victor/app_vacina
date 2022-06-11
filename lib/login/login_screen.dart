@@ -1,9 +1,12 @@
-import 'package:app_vacina_animal/telas/home/home_screen.dart';
-import 'package:app_vacina_animal/telas/login/sign_up_screen.dart';
-import 'package:app_vacina_animal/telas/login/user/user_local.dart';
-import 'package:app_vacina_animal/telas/login/user/user_services.dart';
+import 'package:app_vacina_animal/dashboard/dashboard_screen.dart';
+import 'package:app_vacina_animal/login/sign_up_screen.dart';
+import 'package:app_vacina_animal/login/user/user_local.dart';
+
 import 'package:flutter/material.dart';
 
+import 'user/user_services.dart';
+
+// ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -58,6 +61,7 @@ class LoginScreen extends StatelessWidget {
                                   height: 30,
                                 ),
                                 TextFormField(
+                                  obscureText: true,
                                   onSaved: (value) =>
                                       userLocal.password = value,
                                   initialValue: userLocal.password,
@@ -88,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                                       Navigator.of(context).pushReplacement(
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const HomeScreen()));
+                                                  DashboardScreen()));
                                     }, onFail: (e) {
                                       Text('$e');
                                     });

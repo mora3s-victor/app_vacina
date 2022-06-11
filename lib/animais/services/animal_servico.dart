@@ -1,7 +1,8 @@
-import 'package:app_vacina_animal/animais/vo/animal_vo.dart';
 import 'package:app_vacina_animal/vacinas/vo/vacina_vo.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
+import '../vo/animal_vo.dart';
 
 final FirebaseFirestore _firestore =
     FirebaseFirestore.instance; //obtem uma instancia do firebase

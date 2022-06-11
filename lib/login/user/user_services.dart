@@ -1,11 +1,10 @@
-import 'package:app_vacina_animal/telas/login/user/user_local.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'user_local.dart';
+
 FirebaseAuth _auth = FirebaseAuth.instance;
-FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
 class UserServices {
   UserLocal? userLocal;

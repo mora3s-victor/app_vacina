@@ -1,7 +1,8 @@
 import 'package:app_vacina_animal/helpers/validators.dart';
-import 'package:app_vacina_animal/telas/login/user/user_local.dart';
-import 'package:app_vacina_animal/telas/login/user/user_services.dart';
 import 'package:flutter/material.dart';
+
+import 'user/user_local.dart';
+import 'user/user_services.dart';
 
 class SignUpScreen extends StatelessWidget {
   // utiliado para que possamos acessar o formulário nesta tela

@@ -1,5 +1,5 @@
-import 'package:app_vacina_animal/models/services/animal_servico.dart';
-import 'package:app_vacina_animal/models/vo/animal_vo.dart';
+import 'package:app_vacina_animal/animais/servico/animal_servico.dart';
+import 'package:app_vacina_animal/animais/vo/animal_vo.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -33,9 +33,10 @@ class _TelaEditarAnimalState extends State<TelaEditarAnimal> {
 
   @override
   Widget build(BuildContext context) {
+    var id = widget.animal.id;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Editar Animal"),
+        title: const Text('Editar Animal'),
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -198,12 +199,12 @@ class _TelaEditarAnimalState extends State<TelaEditarAnimal> {
                     if (_formKey.currentState!.validate()) {
                       AnimalServico servico = AnimalServico();
                       AnimalVO animal = AnimalVO(
+                        id,
                         codigoAnimalController.text,
                         descricaoController.text,
                         racaController.text,
                         sexoController.text,
                         pesoController.text,
-                        id: widget.animal.id,
                       );
                       servico.atualizarAnimal(animal);
                       Navigator.of(context).pop();

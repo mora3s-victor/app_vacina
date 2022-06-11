@@ -1,11 +1,13 @@
 import 'package:app_vacina_animal/dashboard/dashboard_screen.dart';
-import 'package:app_vacina_animal/telas/cadastro/tela_registrar_animal.dart';
-import 'package:app_vacina_animal/telas/home/home_screen.dart';
-import 'package:app_vacina_animal/telas/login/login_screen.dart';
-import 'package:app_vacina_animal/telas/registros/lista_animais.dart';
-import 'package:app_vacina_animal/telas/registros/listar_animal_op_del_edit.dart';
+import 'package:app_vacina_animal/animais/telas/tela_registrar_animal.dart';
+import 'package:app_vacina_animal/aplicador/telas/lista_aplicadores.dart';
+import 'package:app_vacina_animal/animais/telas/listar_animal_op_del_edit.dart';
+import 'package:app_vacina_animal/animais/telas/lista_animais_opc_vacinar.dart';
+import 'package:app_vacina_animal/vacinas/telas/list_todas_vacinas.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
+import 'login/login_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,6 +29,9 @@ class MyApp extends StatelessWidget {
   static const listaAnimais = '/lista_animais';
   static const listEditAndDelete = '/listar_animal_op_del_edit';
   static const dashboardScreen = '/dashboard_screen';
+  static const registrarVacinacao = '/tela_registrar_vacina';
+  static const listAplicadores = '/lista_aplicadores';
+  static const listVacinas = '/lista_vacinas';
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +43,12 @@ class MyApp extends StatelessWidget {
         initialRoute: login,
         routes: {
           login: (context) => LoginScreen(),
-          home: (context) => const HomeScreen(),
           telaCadastroAnimal: (context) => TelaCadastroAnimal(),
-          listaAnimais: (context) => const ListaAnimais(),
           listEditAndDelete: (context) => const Listamed(),
-          dashboardScreen: (context) => DashboardScreen()
+          dashboardScreen: (context) => DashboardScreen(),
+          registrarVacinacao: (context) => const TelaRegistrarVacina(),
+          listAplicadores: (context) => const ListaAplicadores(),
+          listVacinas: (context) => const ListVacinas()
         });
   }
 }
